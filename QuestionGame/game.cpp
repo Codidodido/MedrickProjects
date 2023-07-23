@@ -5,6 +5,18 @@ using namespace std;
 
 int option;
 int score = 0;
+
+void DisplayScore(){
+    if(score>0){
+        system("clear");
+        cout << "------"<<endl;
+        cout << "Victory"<<endl;
+        cout << "\nFinal Score: "<<score<<endl;
+        cout << "------";
+        sleep(3);
+    }
+}
+
 void level3(){
     system("clear");
     cout << "Third question ?\n\t-> 37 crows are on a tree. A hunter shot four of them. How many crows remain on tree ?"<<endl;
