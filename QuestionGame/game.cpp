@@ -30,6 +30,7 @@ void level3(){
     cout << "Correct answer";
     score ++;
     sleep(1);
+    DisplayScore();
 }
 void level2(){
     system("clear");
@@ -44,6 +45,7 @@ void level2(){
     cout << "Correct answer";
     score ++;
     sleep(1);
+    level3();
 
 }
 
@@ -60,6 +62,7 @@ void level1(){
     cout << "Correct answer";
     score ++;
     sleep(1);
+    level2();
     
 }
 
