@@ -16,7 +16,7 @@ namespace BattleFront
         void Breath(People victim,Chemical weapon);
     }
     
-    public class Chemical : Weapon , IBreath , IBlister , INerve
+    public class Chemical : Throwing , IBreath , IBlister , INerve
     {
         public float BakeTime,Radius;
 

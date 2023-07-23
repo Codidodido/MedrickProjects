@@ -42,17 +42,18 @@
         <Compile Include="People.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Throwing.cs" />
         <Compile Include="Weapon.cs" />
-        <Compile Include="Weapons\Chemical.cs" />
         <Compile Include="Weapons\Combat.cs" />
-        <Compile Include="Weapons\Explosive.cs" />
         <Compile Include="Weapons\Firearms.cs" />
+        <Compile Include="Weapons\Throwing\Chemical.cs" />
+        <Compile Include="Weapons\Throwing\Explosive.cs" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Weapons\BioligicalWeapon\" />
       <Folder Include="Weapons\CombatWeapon\" />
-      <Folder Include="Weapons\ExplosiveWeapon\" />
       <Folder Include="Weapons\FirearmsWeapon\" />
+      <Folder Include="Weapons\Throwing\BioligicalWeapon\" />
+      <Folder Include="Weapons\Throwing\ExplosiveWeapon\" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
