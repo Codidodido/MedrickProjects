@@ -4,5 +4,6 @@ namespace BattleFront
     {
         public float Health;
         public bool CanWalk, CanSee, CanFocus;
+        public string Name;
     }
 }
