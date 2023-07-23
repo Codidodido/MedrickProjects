@@ -4,5 +4,7 @@ namespace BattleFront
     {
         public float Damage,FireRate,Mobility,Range;
         public int Magazine;
+
+        
     }
 }

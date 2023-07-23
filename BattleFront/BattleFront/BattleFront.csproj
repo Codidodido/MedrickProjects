@@ -46,8 +46,9 @@
         <Compile Include="Weapon.cs" />
         <Compile Include="Weapons\Combat.cs" />
         <Compile Include="Weapons\Firearms.cs" />
+        <Compile Include="Weapons\Throwing\Bomb.cs" />
         <Compile Include="Weapons\Throwing\Chemical.cs" />
-        <Compile Include="Weapons\Throwing\Explosive.cs" />
+        <Compile Include="Weapons\Throwing\Rocket.cs" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Weapons\CombatWeapon\" />
