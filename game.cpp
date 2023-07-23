@@ -5,6 +5,20 @@ using namespace std;
 
 int option;
 
+void level2(){
+    system("clear");
+    cout << "Second question ?\n\t-> f(x) = 2 + (x^3) , Integral f(2) = ?"<<endl;
+    cout << "->: ";
+    cin >> option;
+    while(option!=8){
+        cout << "Wrong answer";
+        cin >> option;
+    }
+    cout << "Correct answer";
+    sleep(1);
+
+}
+
 void level1(){
 	system("clear");
     cout << "First question ?\n\t-> 2 + 5 * (8-3) =  ?"<< endl;
