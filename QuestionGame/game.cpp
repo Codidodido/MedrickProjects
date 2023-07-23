@@ -4,7 +4,7 @@
 using namespace std;
 
 int option;
-
+int score = 0;
 void level3(){
     system("clear");
     cout << "Third question ?\n\t-> 37 crows are on a tree. A hunter shot four of them. How many crows remain on tree ?"<<endl;
@@ -13,8 +13,10 @@ void level3(){
     while(option!=0){
         cout << "Wrong answer";
         cin >> option;
+        score --;
     }
     cout << "Correct answer";
+    score ++;
     sleep(1);
 }
 void level2(){
@@ -25,8 +27,10 @@ void level2(){
     while(option!=8){
         cout << "Wrong answer";
         cin >> option;
+        score --;
     }
     cout << "Correct answer";
+    score ++;
     sleep(1);
 
 }
@@ -39,8 +43,10 @@ void level1(){
     while(option!=27){
         cout << "Wrong answer";
         cin >> option;
+        score --;
     }
     cout << "Correct answer";
+    score ++;
     sleep(1);
     
 }
