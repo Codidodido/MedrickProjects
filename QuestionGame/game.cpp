@@ -5,6 +5,18 @@ using namespace std;
 
 int option;
 
+void level3(){
+    system("clear");
+    cout << "Third question ?\n\t-> 37 crows are on a tree. A hunter shot four of them. How many crows remain on tree ?"<<endl;
+    cout << "->: ";
+    cin >> option;
+    while(option!=0){
+        cout << "Wrong answer";
+        cin >> option;
+    }
+    cout << "Correct answer";
+    sleep(1);
+}
 void level2(){
     system("clear");
     cout << "Second question ?\n\t-> f(x) = 2 + (x^3) , Integral f(2) = ?"<<endl;
