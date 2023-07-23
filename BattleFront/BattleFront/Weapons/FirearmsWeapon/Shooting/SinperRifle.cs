@@ -1,6 +1,6 @@
 namespace BattleFront
 {
-    public class Combat
+    public class SinperRifle : Shooting
     {
         
     }

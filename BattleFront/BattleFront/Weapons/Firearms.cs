@@ -10,6 +10,7 @@ namespace BattleFront
     public class Firearms : Weapon,IShot
     {
         public float Accuracy, Control;
+        public int Ammunition;
 
         public void FireShot(People victim, Firearms attack)
         {

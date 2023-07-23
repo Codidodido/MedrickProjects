@@ -42,19 +42,33 @@
         <Compile Include="People.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Throwing.cs" />
         <Compile Include="Weapon.cs" />
-        <Compile Include="Weapons\Combat.cs" />
+        <Compile Include="Weapons\Cold.cs" />
+        <Compile Include="Weapons\ColdWeapons\Axe.cs" />
+        <Compile Include="Weapons\ColdWeapons\Bow.cs" />
+        <Compile Include="Weapons\ColdWeapons\Mace.cs" />
+        <Compile Include="Weapons\ColdWeapons\Spear.cs" />
+        <Compile Include="Weapons\ColdWeapons\Sword.cs" />
         <Compile Include="Weapons\Firearms.cs" />
-        <Compile Include="Weapons\Throwing\Bomb.cs" />
-        <Compile Include="Weapons\Throwing\Chemical.cs" />
-        <Compile Include="Weapons\Throwing\Rocket.cs" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Weapons\CombatWeapon\" />
-      <Folder Include="Weapons\FirearmsWeapon\" />
-      <Folder Include="Weapons\Throwing\BioligicalWeapon\" />
-      <Folder Include="Weapons\Throwing\ExplosiveWeapon\" />
+        <Compile Include="Weapons\FirearmsWeapon\Shooting.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Shooting\AssaultRifle.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Shooting\LightMachineGun.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Shooting\Pistol.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Shooting\Shotgun.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Shooting\SinperRifle.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Shooting\SubmachineGun.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing\Bomb.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing\BombWeapon\Grenade.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing\BombWeapon\Mine.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing\Chemical.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing\ChemicalWeapon\Acid.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing\ChemicalWeapon\MustardGas.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing\ChemicalWeapon\TearGas.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing\ChemicalWeapon\VX.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing\Rocket.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing\RocketWeapon\Bazooka.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing\RocketWeapon\RPG7.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

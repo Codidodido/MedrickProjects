@@ -1,6 +1,6 @@
 namespace BattleFront
 {
-    public class Throwing : Weapon
+    public class Throwing : Firearms
     {
         public float Radius;
     }
