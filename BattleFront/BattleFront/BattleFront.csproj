@@ -39,6 +39,9 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Equipment\Attachment.cs" />
+        <Compile Include="Interfaces\IShot.cs" />
+        <Compile Include="Interfaces\IWeaponInfo.cs" />
         <Compile Include="People.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />

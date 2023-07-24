@@ -3,21 +3,12 @@ using System.Runtime.ConstrainedExecution;
 
 namespace BattleFront
 {
-    interface IShot
+    
+    public class Firearms : Weapon
     {
-        void FireShot(People victim,Firearms attack);
-    }
-    public class Firearms : Weapon,IShot
-    {
-        public float Accuracy, Control;
-        public int Ammunition;
-
-        public void FireShot(People victim, Firearms attack)
-        {
-            victim.Health -= attack.Damage;
-            Console.WriteLine($"\n----\n{victim.Name} get attacked.\n\n-> Health: {victim.Health} | Damage: -{attack.Damage}");
-        }
-        
-        
+        public float Accuracy{ get; set; }
+        public float Control{ get; set; }
+        public int Ammunition{ get; set; }
+        public string Name { get; set; }
     }
 }

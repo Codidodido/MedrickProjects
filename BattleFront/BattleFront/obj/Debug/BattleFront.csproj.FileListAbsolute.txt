@@ -1,0 +1,7 @@
+C:\Users\Amir\RiderProjects\MedrichProject\BattleFront\BattleFront\bin\Debug\BattleFront.exe
+C:\Users\Amir\RiderProjects\MedrichProject\BattleFront\BattleFront\bin\Debug\BattleFront.pdb
+C:\Users\Amir\RiderProjects\MedrichProject\BattleFront\BattleFront\obj\Debug\BattleFront.csproj.AssemblyReference.cache
+C:\Users\Amir\RiderProjects\MedrichProject\BattleFront\BattleFront\obj\Debug\BattleFront.csproj.SuggestedBindingRedirects.cache
+C:\Users\Amir\RiderProjects\MedrichProject\BattleFront\BattleFront\obj\Debug\BattleFront.csproj.CoreCompileInputs.cache
+C:\Users\Amir\RiderProjects\MedrichProject\BattleFront\BattleFront\obj\Debug\BattleFront.exe
+C:\Users\Amir\RiderProjects\MedrichProject\BattleFront\BattleFront\obj\Debug\BattleFront.pdb
