@@ -3,10 +3,10 @@ namespace BattleFront.Equipment
 {
     public enum Attachment
     {
-        Muzzle,
+        Silencer,
         Barrel,
         Stock,
-        Optic,
+        Scope,
         Laser,
         Grip,
         Magazine,
