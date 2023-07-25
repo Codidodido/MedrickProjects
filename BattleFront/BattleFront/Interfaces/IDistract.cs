@@ -1,6 +1,6 @@
 namespace BattleFront.Interfaces
 {
-    public interface IBlister
+    public interface IDistract
     {
         void Blister(People victim);
     }

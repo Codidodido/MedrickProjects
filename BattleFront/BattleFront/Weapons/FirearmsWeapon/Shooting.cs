@@ -11,26 +11,37 @@ namespace BattleFront
     public class Shooting : Firearms, IWeaponInfo,IShot
     {
         //Round Per Second
-        public float RP { get; set; }
+        
         public Attachment[] Equipment { get; set; }
+
+        public Shooting(string name, float range, float mobility, float firerate, float damage,int ammunition, float control,float accuracy,Attachment[] equipment)
+        {
+            Name = name;
+            Range = range;
+            Mobility = mobility;
+            FireRate = firerate;
+            Damage = damage;
+            Ammunition = ammunition;
+            Control = control;
+            Accuracy = accuracy;
+                Equipment = equipment;
+        }
+        
 
         public void Info()
         {
-            Console.WriteLine($"Gun {Name} : \n" +
-                              $"Damage -> {Damage} | " +
-                              $"FireRate -> {FireRate}\n" +
+            Console.WriteLine($"---\nGun {Name} : \nDamage -> {Damage} | FireRate -> {{FireRate}}\n" +
                               $"Mobility -> {Mobility} | " +
                               $"Range -> {Range}\n" +
                               $"Accuracy -> {Accuracy} | " +
                               $"Control -> {Control}\n" +
-                              $"Ammunition -> {Ammunition} | " +
-                              $"RP -> {RP}");
-            Console.Write("Equipment -> ");
+                              $"Ammunition -> {Ammunition} | ");
+                              Console.Write("Equipment -> ");
             foreach (var attachment in Equipment)
             {
                 Console.Write($"| {attachment} |");
             }
-            Console.WriteLine();
+            Console.WriteLine("\n---");
         }
 
         public void Shot(People victim)

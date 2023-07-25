@@ -5,6 +5,14 @@ namespace BattleFront
 {
     public class Cold : Weapon , IAttack
     {
+        public Cold(string name,float damage,float firerate,float mobility,float range)
+        {
+            Name = name;
+            Damage = damage;
+            FireRate = firerate;
+            Mobility = mobility;
+            Range = range;
+        }
 
         public void Attack(People victim)
         {
