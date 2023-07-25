@@ -40,12 +40,12 @@ namespace BattleFront
             {
                 Ammunition--;
                 Console.WriteLine("-> Shot a bullet at victim.");
-
+                victim.Health -= Damage;
                 if (victim.Health > 0)
                 {
-                    victim.Health -= Damage;
+                    
                     Console.WriteLine($"---\n-> Bullet hit victim {victim.Name}.\n--> Damage: {Damage}");
-                    Console.WriteLine($"@@@\n-> Victim '{victim.Name}' Situation: " +
+                    Console.WriteLine($"\n-> Victim '{victim.Name}' Situation: " +
                                       $"\n--> Health: {victim.Health}" +
                                       $"\n--> CanWalk: {victim.CanWalk}" +
                                       $"\n--> CanSee: {victim.CanSee}" +
@@ -54,12 +54,16 @@ namespace BattleFront
                 }
                 else
                 {
-                    Console.WriteLine($"@@@\n-> Victim '{victim.Name} died. '");
+                    Console.WriteLine($"\n-> Victim '{victim.Name} died. '");
                 }
                 
-                Console.WriteLine($"###\n-> Weapon {Name} Situation:");
+                Console.WriteLine($"\n-> Weapon {Name} Situation:");
                 Info();
                 
+            }
+            else
+            {
+                Console.WriteLine($"\n-> Victim '{victim.Name} died. '");
             }
         }
 

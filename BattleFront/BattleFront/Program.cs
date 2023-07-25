@@ -1,4 +1,7 @@
-﻿using BattleFront.Equipment;
+﻿using BattleFront.ChemicalWeapon;
+using BattleFront.ColdWeapons;
+using BattleFront.Equipment;
+using BattleFront.RocketWeapon;
 
 
 namespace BattleFront
@@ -66,9 +69,76 @@ namespace BattleFront
             {
                 Remington.Shot(Adam);
             }
+            //Adam Killed
             
+            
+            // Throw Test
+            People Hava = new People
+            {
+                Health = 100,
+                CanWalk = true,
+                CanSee = true,
+                CanFocus = true,
+                Name = "Hava"
+            };
+            TearGas tearGas = new TearGas
+            {
+                Damage = 20,
+                FireRate = 1,
+                Mobility = 100,
+                Range = 60,
+                Accuracy = 75,
+                Control = 50,
+                Ammunition = 1,
+                Name = "Tear Gas",
+                Radius = 5,
+                Type = "Breath",
+                BakeTime = 2,
 
+            };
+            tearGas.Info();
+            tearGas.Throw(Hava);
+            RPG rpg = new RPG
+            {
+                Damage = 80,
+                FireRate = 1,
+                Mobility = 10,
+                Range = 90,
+                Accuracy = 90,
+                Control = 70,
+                Ammunition = 2,
+                Name = "RPG7",
+                Radius = 2,
+                Type = "Nerve"
+            };
+            rpg.Throw(Hava);
+            
+            //Hava Killed
 
+            Sword excalibur = new Sword
+            {
+                Damage = 37,
+                FireRate = 1,
+                Mobility = 100,
+                Range = 1,
+                Name = "excalibur"
+            };
+
+            People Arthor = new People
+            {
+                Health = 100,
+                CanWalk = true,
+                CanSee = true,
+                CanFocus = true,
+                Name = "Arthor"
+            };
+
+            while (Arthor.Health > 0)
+            {
+                excalibur.Attack(Arthor);
+            }
         }
+        
+        
     }
 }

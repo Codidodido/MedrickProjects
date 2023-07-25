@@ -1,6 +1,6 @@
 namespace BattleFront.RocketWeapon
 {
-    public class RPG7 : Rocket
+    public class RPG : Rocket
     {
         
     }

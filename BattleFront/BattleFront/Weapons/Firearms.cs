@@ -9,6 +9,6 @@ namespace BattleFront
         public float Accuracy{ get; set; }
         public float Control{ get; set; }
         public int Ammunition{ get; set; }
-        public string Name { get; set; }
+        
     }
 }

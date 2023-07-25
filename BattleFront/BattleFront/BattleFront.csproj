@@ -40,7 +40,12 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Equipment\Attachment.cs" />
+        <Compile Include="Interfaces\IAttack.cs" />
+        <Compile Include="Interfaces\IBlister.cs" />
+        <Compile Include="Interfaces\IBreath.cs" />
+        <Compile Include="Interfaces\INerve.cs" />
         <Compile Include="Interfaces\IShot.cs" />
+        <Compile Include="Interfaces\IThrow.cs" />
         <Compile Include="Interfaces\IWeaponInfo.cs" />
         <Compile Include="People.cs" />
         <Compile Include="Program.cs" />
@@ -71,7 +76,7 @@
         <Compile Include="Weapons\FirearmsWeapon\Throwing\ChemicalWeapon\VX.cs" />
         <Compile Include="Weapons\FirearmsWeapon\Throwing\Rocket.cs" />
         <Compile Include="Weapons\FirearmsWeapon\Throwing\RocketWeapon\Bazooka.cs" />
-        <Compile Include="Weapons\FirearmsWeapon\Throwing\RocketWeapon\RPG7.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Throwing\RocketWeapon\RPG.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

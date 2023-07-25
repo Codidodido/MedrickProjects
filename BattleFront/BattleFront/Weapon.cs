@@ -6,7 +6,7 @@ namespace BattleFront
         public float FireRate{ get; set; }
         public float Mobility{ get; set; }
         public float Range{ get; set; }
-        
+        public string Name { get; set; }
 
         
     }
