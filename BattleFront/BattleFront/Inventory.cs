@@ -23,7 +23,7 @@ namespace BattleFront
 
         public void RemoveFromInventory(T item)
         {
-            
+            Items.Remove(item);
         }
     }
 }

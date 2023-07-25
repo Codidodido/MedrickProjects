@@ -14,6 +14,10 @@ namespace BattleFront
         
         public Attachment[] Equipment { get; set; }
 
+        public Shooting()
+        {
+            
+        }
         public Shooting(string name, float range, float mobility, float firerate, float damage,int ammunition, float control,float accuracy,Attachment[] equipment)
         {
             Name = name;
@@ -26,7 +30,18 @@ namespace BattleFront
             Accuracy = accuracy;
                 Equipment = equipment;
         }
-        
+        public void Create(string name, float range, float mobility, float firerate, float damage,int ammunition, float control,float accuracy,Attachment[] equipment)
+        {
+            Name = name;
+            Range = range;
+            Mobility = mobility;
+            FireRate = firerate;
+            Damage = damage;
+            Ammunition = ammunition;
+            Control = control;
+            Accuracy = accuracy;
+            Equipment = equipment;
+        }
 
         public void Info()
         {

@@ -16,30 +16,55 @@ namespace BattleFront
         
         public static void Main(string[] args)
         {
-            // void AddToGunInventory(string name, float range, float mobility, float firerate, float damage,int ammunition, float control,float accuracy,Attachment[] equipment)
-            // {
-            //     Shooting gun = new Shooting(name, range, mobility, firerate, damage, ammunition, control, accuracy,
-            //         equipment);
-            //     Object = new Inventory<Shooting>();
-            //     Object.Object = new List<Shooting>();
-            //     Object.Object.Add(gun);
-            //     
-            // }
-            
-            
             Console.WriteLine("WELCOME TO BATTLEFRONT GAME");
-            Console.WriteLine("\nChoose your weapon type: ");
-            Console.WriteLine("\t1. Shooting\n\t2. Throwing\n\t3. Cold");
-            int Type = Convert.ToInt32(Console.ReadLine());
+            
+            
 
-            Console.WriteLine("\nChoose your weapon: ");
-            int selectweapon;
+           
 
             Shooting Gun = new Shooting("",0,0,0,0,0,0,0,new[] { Attachment.Barrel });
             Cold Weapon = new Cold("",0,0,0,0);
             Bomb Bomb = new Bomb("",0);
             
+            Inventory<Shooting> gunInventory = new Inventory<Shooting>();
+            Inventory<Cold> weaponInventory = new Inventory<Cold>();
+            Inventory<Bomb> bombInventory = new Inventory<Bomb>();
             
+            //--- Gun Box ---//
+            List<string> GunName = new List<string>
+            {
+                "Glock 17", "Smith & Wesson Model 686", "Remington 870", "AR-15", "AK-47", "Beretta 92FS", "Sig Sauer P320", "Ruger 10/22", "Mossberg 500", "Colt M1911", "FN SCAR", "Heckler & Koch MP5", "Springfield XD", "Winchester Model 70", "Walther PPK", "Browning Hi-Power", "Steyr AUG", "CZ-75", "Ruger Mini-14", "M1 Garand", "M1A", "FN FAL", "HK G36", "Thompson submachine gun", "Barrett M82", "Mosin-Nagant", "Uzi", "MP40", "Ruger SR9", "Smith & Wesson M&P", "Benelli M4", "Bushmaster ACR", "Kel-Tec KSG", "IWI Tavor", "Savage Arms Axis", "Walther PPQ", "Ruger LCP", "CZ P-07", "Taurus PT92", "Browning BPS", "Marlin Model 60", "Beretta PX4 Storm", "Kel-Tec Sub-2000", "CZ Scorpion EVO 3", "Springfield M1A", "Steyr M9-A1"
+            };
+
+            List<Shooting> GUNBOX = new List<Shooting>();
+            Random rand = new Random(); // Move this outside the loop
+
+            for (int i = 0; i < 5; i++)
+            {
+                Shooting gunObject = new Shooting(
+                    GunName[rand.Next(0, 46)],
+                    rand.Next(0, 100),
+                    rand.Next(0, 100),
+                    rand.Next(0, 100),
+                    rand.Next(0, 100),
+                    rand.Next(0, 100),
+                    rand.Next(0, 100),
+                    rand.Next(0, 100),
+                    new[] { Attachment.Barrel }
+                );
+                GUNBOX.Add(gunObject);
+            }
+
+            foreach (var gun in GUNBOX)
+            {
+                gun.Info();
+            }
+
+            Console.WriteLine("\nChoose your weapon type: ");
+            Console.WriteLine("\t1. Shooting\n\t2. Throwing\n\t3. Cold");
+            int Type = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\nChoose your weapon: ");
+            int selectweapon;
             switch (Type)
             {
                 case 1:
@@ -112,8 +137,7 @@ namespace BattleFront
                 case 3:
                     break;
             }
-            Inventory<Shooting> gunInventory = new Inventory<Shooting>();
-
+            
             
             Shooting uzi = new Shooting("Uzi", 95, 100, 80, 30, 80, 30, 40, new[] { Attachment.Barrel });
             gunInventory.AddToInventory(uzi);
@@ -140,7 +164,7 @@ namespace BattleFront
             while (order!=0 &&  target.Health>0)
             {
                 Console.WriteLine("Menu: ");
-                Console.WriteLine("\t-> 1. Attack to enemy\n\t-> 2. Drop\n\t-> 3. Look for gun\n\n\t-> 0. Exit");
+                Console.WriteLine("\t-> 1. Attack to enemy\n\t-> 2. Drop\n\t-> 3. Look for gun\n-> 4. Inventory\n\t-> 0. Exit");
                 order = Convert.ToInt32(Console.ReadLine());
                 switch (order)
                 {
@@ -153,14 +177,22 @@ namespace BattleFront
                     case 2:
                         break;
                     case 3:
+                        
+                        break;
+                    case 4:
+                        foreach (var guns in gunInventory.Items)
+                        {
+                            guns.Info();
+                        }
+
                         break;
                 }
                 {
                     
                 }
             }
-            
 
+            
 
         }
     }

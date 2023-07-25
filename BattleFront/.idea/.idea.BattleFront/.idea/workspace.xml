@@ -8,44 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03d7c420-ba10-44f9-ad84-95b12de6c0e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BattleFront/Inventory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/ChemicalWeapon/BlindThrow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BattleFront/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BattleFront/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/BattleFront.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/BattleFront.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Equipment/Attachment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Equipment/Attachment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Interfaces/IBlister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Interfaces/IDistract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Interfaces/IBreath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Interfaces/IBlind.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Interfaces/INerve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Interfaces/IParalyze.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleFront/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleFront/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/Cold.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/Cold.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/ColdWeapons/Axe.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/ColdWeapons/Bow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/ColdWeapons/Mace.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/ColdWeapons/Spear.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/ColdWeapons/Sword.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/Firearms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/Firearms.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/AssaultRifle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/LightMachineGun.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/Pistol.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/Shotgun.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/SniperRifle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/SubmachineGun.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/Bomb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/Bomb.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/BombWeapon/Grenade.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/BombWeapon/Mine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/Chemical.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/Chemical.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/ChemicalWeapon/Acid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/ChemicalWeapon/ParalyzeThrow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/ChemicalWeapon/MustardGas.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/ChemicalWeapon/TearGas.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/ChemicalWeapon/VX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/ChemicalWeapon/DistractThrow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/Rocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/Rocket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/RocketWeapon/Bazooka.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/RocketWeapon/RPG.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleFront/bin/Debug/BattleFront.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/bin/Debug/BattleFront.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleFront/bin/Debug/BattleFront.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/bin/Debug/BattleFront.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/obj/Debug/BattleFront.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/obj/Debug/BattleFront.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleFront/obj/Debug/BattleFront.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/obj/Debug/BattleFront.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleFront/obj/Debug/BattleFront.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/obj/Debug/BattleFront.pdb" afterDir="false" />
     </list>
@@ -63,25 +31,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Amir\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Amir\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Amir\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Amir\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Amir\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Amir\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="BattleFront" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
