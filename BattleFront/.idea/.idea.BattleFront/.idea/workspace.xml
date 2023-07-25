@@ -8,23 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03d7c420-ba10-44f9-ad84-95b12de6c0e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BattleFront/Interfaces/IAttack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BattleFront/Interfaces/IBlister.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BattleFront/Interfaces/IBreath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BattleFront/Interfaces/INerve.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BattleFront/Interfaces/IThrow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleFront/Interfaces/IWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BattleFront/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BattleFront/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleFront/BattleFront.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/BattleFront.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleFront/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/Cold.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/Cold.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/Firearms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/Firearms.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/Bomb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/Bomb.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/Chemical.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/Chemical.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/Rocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/Rocket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/RocketWeapon/RPG7.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Throwing/RocketWeapon/RPG.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/ColdWeapons/Bow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/ColdWeapons/Bow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/AssaultRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/AssaultRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/LightMachineGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/LightMachineGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/Pistol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/Pistol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/Shotgun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/Shotgun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/SinperRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/SniperRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/SubmachineGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/Weapons/FirearmsWeapon/Shooting/SubmachineGun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleFront/bin/Debug/BattleFront.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/bin/Debug/BattleFront.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleFront/bin/Debug/BattleFront.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/bin/Debug/BattleFront.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleFront/obj/Debug/BattleFront.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BattleFront/obj/Debug/BattleFront.csproj.CoreCompileInputs.cache" afterDir="false" />
@@ -88,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1690208261382</updated>
-      <workItem from="1690208262480" duration="16398000" />
+      <workItem from="1690208262480" duration="19296000" />
     </task>
     <servers />
   </component>
@@ -97,24 +91,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/BattleFront/Program.cs</url>
-          <line>46</line>
-          <properties documentPath="C:\Users\Amir\RiderProjects\MedrichProject\BattleFront\BattleFront\Program.cs" initialLine="23" containingFunctionPresentation="Method 'Main'">
-            <startOffsets>
-              <option value="1148" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1148" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

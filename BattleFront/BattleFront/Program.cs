@@ -1,144 +1,83 @@
-﻿using BattleFront.ChemicalWeapon;
+﻿using System;
+using BattleFront.BombWeapon;
+using BattleFront.ChemicalWeapon;
 using BattleFront.ColdWeapons;
-using BattleFront.Equipment;
+using BattleFront.Interfaces;
 using BattleFront.RocketWeapon;
-
 
 namespace BattleFront
 {
-    internal class Program
+    internal class Program 
     {
         public static void Main(string[] args)
         {
-            Pistol colt = new Pistol
-            {
-                Name = "Colt",
-                Damage = 10f,
-                FireRate = 10f,
-                Mobility = 10f,
-                Range = 10f,
-                Accuracy = 10f,
-                Control = 10f,
-                Ammunition = 7,
-                RP = 0.5f,
-                Equipment = new Attachment[]
-                {
-                    Attachment.Laser,
-                    Attachment.Magazine,
-                    Attachment.Muzzle
-                },
+            Console.WriteLine("WELCOME TO BATTLEFRONT GAME");
+            Console.WriteLine("\nChoose your weapon type: ");
+            Console.WriteLine("\t1. Shooting\n\t2. Throwing\n\t3. Cold");
+            int Type = Convert.ToInt32(Console.ReadLine());
 
-            };
-
-            People Adam = new People
+            Console.WriteLine("\nChoose your weapon: ");
+            string weapon;
+            IWeapon selectedWeapon = null;
+            switch (Type)
             {
-                Health = 100,
-                CanWalk = true,
-                CanSee = true,
-                CanFocus = true,
-                Name = "Adam"
-            };
-            
-            colt.Info();
-            while (colt.Ammunition>0)
-            {
-                colt.Shot(Adam);    
+                case 1:
+                    Console.WriteLine("\t1. Assault rifle\n\t2. Light machine gun\n\t3. Pistol\n\t4. Shotgun\n\t5. Sniper rifle\n\t6. Submachine gun");
+                    weapon = Console.ReadLine();
+                    if (int.TryParse(weapon, out int shootingChoice))
+                    {
+                        switch (shootingChoice)
+                        {
+                            case 1:
+                                selectedWeapon = new AssaultRifle();
+                                break;
+                            case 2:
+                                selectedWeapon = new LightMachineGun();
+                                break;
+                            case 3:
+                                selectedWeapon = new Pistol();
+                                break;
+                            case 4:
+                                selectedWeapon = new Shotgun();
+                                break;
+                            case 5:
+                                selectedWeapon = new SniperRifle();
+                                break;
+                            case 6:
+                                selectedWeapon = new SubmachineGun();
+                                break;
+                            // Add cases for other shooting weapons
+                            default:
+                                Console.WriteLine("Invalid choice.");
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input. Please enter a number.");
+                    }
+                    break;
+                case 2:
+                    Console.WriteLine("\tBomb\n\t\t1. Grenade \n\t\t2. Mine\n\tChemical\n\t\t3. Acid\n\t\t4. Mustard gas\n\t\t5. Tear gas\n\t\t6. VX\n\tRocket\n\t\t7. Bazooka\n\t\t8. RPG");
+                    // Add cases for throwing weapons
+                    break;
+                case 3:
+                    Console.WriteLine("\t1. Sword\n\t2. Axe\n\t3. Mace\n\t4. Bow\n\t5. Spear");
+                    // Add cases for cold weapons
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice.");
+                    break;
             }
 
-            Shotgun Remington = new Shotgun
+            // Use the selected weapon if one was chosen
+            if (selectedWeapon != null)
             {
-                Damage = 30,
-                FireRate = 2,
-                Mobility = 5,
-                Range = 5,
-                Accuracy = 8,
-                Control = 7,
-                Ammunition = 2,
-                Name = "Remington 870",
-                RP = 2f,
-                Equipment = new Attachment[]
-                {
-                    Attachment.Laser,
-                    Attachment.Magazine,
-                    Attachment.Muzzle,
-                    Attachment.Barrel
-                }
-            };
-
-            while (Remington.Ammunition > 0)
-            {
-                Remington.Shot(Adam);
-            }
-            //Adam Killed
-            
-            
-            // Throw Test
-            People Hava = new People
-            {
-                Health = 100,
-                CanWalk = true,
-                CanSee = true,
-                CanFocus = true,
-                Name = "Hava"
-            };
-            TearGas tearGas = new TearGas
-            {
-                Damage = 20,
-                FireRate = 1,
-                Mobility = 100,
-                Range = 60,
-                Accuracy = 75,
-                Control = 50,
-                Ammunition = 1,
-                Name = "Tear Gas",
-                Radius = 5,
-                Type = "Breath",
-                BakeTime = 2,
-
-            };
-            tearGas.Info();
-            tearGas.Throw(Hava);
-            RPG rpg = new RPG
-            {
-                Damage = 80,
-                FireRate = 1,
-                Mobility = 10,
-                Range = 90,
-                Accuracy = 90,
-                Control = 70,
-                Ammunition = 2,
-                Name = "RPG7",
-                Radius = 2,
-                Type = "Nerve"
-            };
-            rpg.Throw(Hava);
-            
-            //Hava Killed
-
-            Sword excalibur = new Sword
-            {
-                Damage = 37,
-                FireRate = 1,
-                Mobility = 100,
-                Range = 1,
-                Name = "excalibur"
-            };
-
-            People Arthor = new People
-            {
-                Health = 100,
-                CanWalk = true,
-                CanSee = true,
-                CanFocus = true,
-                Name = "Arthor"
-            };
-
-            while (Arthor.Health > 0)
-            {
-                excalibur.Attack(Arthor);
+                Console.WriteLine($"You have selected {selectedWeapon.Name}.");
+                
+                // Add any other code to use the selected weapon
             }
         }
-        
-        
     }
+
 }

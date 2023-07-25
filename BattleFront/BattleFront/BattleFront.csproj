@@ -46,6 +46,7 @@
         <Compile Include="Interfaces\INerve.cs" />
         <Compile Include="Interfaces\IShot.cs" />
         <Compile Include="Interfaces\IThrow.cs" />
+        <Compile Include="Interfaces\IWeapon.cs" />
         <Compile Include="Interfaces\IWeaponInfo.cs" />
         <Compile Include="People.cs" />
         <Compile Include="Program.cs" />
@@ -63,7 +64,7 @@
         <Compile Include="Weapons\FirearmsWeapon\Shooting\LightMachineGun.cs" />
         <Compile Include="Weapons\FirearmsWeapon\Shooting\Pistol.cs" />
         <Compile Include="Weapons\FirearmsWeapon\Shooting\Shotgun.cs" />
-        <Compile Include="Weapons\FirearmsWeapon\Shooting\SinperRifle.cs" />
+        <Compile Include="Weapons\FirearmsWeapon\Shooting\SniperRifle.cs" />
         <Compile Include="Weapons\FirearmsWeapon\Shooting\SubmachineGun.cs" />
         <Compile Include="Weapons\FirearmsWeapon\Throwing.cs" />
         <Compile Include="Weapons\FirearmsWeapon\Throwing\Bomb.cs" />

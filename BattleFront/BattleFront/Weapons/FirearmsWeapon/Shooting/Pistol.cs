@@ -1,14 +1,12 @@
 using System.Net.Mail;
 using BattleFront.Equipment;
+using BattleFront.Interfaces;
 using Attachment = BattleFront.Equipment.Attachment;
 
 namespace BattleFront
 {
-    public class Pistol : Shooting
+    public class Pistol : Shooting , IWeapon
     {
-        public Pistol()
-        {
-            Equipment = new Attachment[0];
-        }
+        public string Name => "Pistol";
     }
 }
