@@ -9,6 +9,7 @@ public class SceneLoader : MonoBehaviour
     // Start is called before the first frame update
     public void LoadNextScene()
     {
+        
         int CurrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(CurrentSceneIndex + 1);
     }

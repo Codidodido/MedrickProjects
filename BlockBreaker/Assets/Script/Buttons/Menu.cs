@@ -10,5 +10,6 @@ public class Menu : MonoBehaviour
     public void GoMenu()
     {
         SceneManager.LoadScene(0);
+        FindObjectOfType<GameStatus>().Restart();
     }
 }

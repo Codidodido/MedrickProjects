@@ -7,6 +7,15 @@ public class Restart : MonoBehaviour
     // Start is called before the first frame update
     public void RestartGame()
     {
-        SceneManager.LoadScene(1);
+        List<int> levelsList = FindObjectOfType<GameStatus>().GetLevel();
+        if(levelsList != null)
+        {
+            SceneManager.LoadScene(levelsList[levelsList.Count - 1]);
+        }
+        else
+        {
+            SceneManager.LoadScene(1);
+        }
+        
     }
 }
