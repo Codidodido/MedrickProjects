@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,20 @@ public class Block : MonoBehaviour
     private void Start()
     {
         level = FindObjectOfType<Level>();
-        level.CounterBreakableBlocks();
+        if (tag == "breakable")
+        {
+            level.CounterBreakableBlocks();
+        }
+        
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        DestroyBlock();
+        if (tag == "breakable")
+        {
+            DestroyBlock();
+        }
+        
     }
 
     private void DestroyBlock()

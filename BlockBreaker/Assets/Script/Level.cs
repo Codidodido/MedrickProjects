@@ -15,7 +15,10 @@ public class Level : MonoBehaviour
 
     public void CounterBreakableBlocks()
     {
-        BreakableBlocks++;
+        
+            BreakableBlocks++;
+        
+        
     }
 
     public void DecreaseBreakableBlocks()
