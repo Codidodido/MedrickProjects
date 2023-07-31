@@ -12,7 +12,13 @@ public class Block : MonoBehaviour
         level = FindObjectOfType<Level>();
         level.CounterBreakableBlocks();
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
+    {
+        DestroyBlock();
+    }
+
+    private void DestroyBlock()
     {
         AudioSource.PlayClipAtPoint(BreakSound, Camera.main.transform.position);
         level.DecreaseBreakableBlocks();
