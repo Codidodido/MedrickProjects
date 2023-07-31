@@ -284,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BreakSound: {fileID: 8300000, guid: 73da76492ffaad64483ec91bdb89005d, type: 3}
+  blockSparkFLX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
 --- !u!1 &190028750
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,9 +870,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f3ccd96e025d843a3fd422da006c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Display: {fileID: 574158398}
-  Score: 0
-  status: {fileID: 0}
 --- !u!1 &945709251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,6 +1365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BreakSound: {fileID: 8300000, guid: 73da76492ffaad64483ec91bdb89005d, type: 3}
+  blockSparkFLX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
 --- !u!4 &1184296496 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5166766072197205466, guid: 3b16b80eac3941e4dab18ed67944eedd, type: 3}
@@ -1617,6 +1616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BreakSound: {fileID: 8300000, guid: 73da76492ffaad64483ec91bdb89005d, type: 3}
+  blockSparkFLX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
 --- !u!1 &1733023870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,6 +1742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BreakSound: {fileID: 8300000, guid: 73da76492ffaad64483ec91bdb89005d, type: 3}
+  blockSparkFLX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
 --- !u!1 &1927511866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,6 +1792,7 @@ MonoBehaviour:
   ScorePayBlock: 88
   CurrentScore: 0
   scoreText: {fileID: 574158398}
+  Levels: 
 --- !u!1 &1927737418
 GameObject:
   m_ObjectHideFlags: 0

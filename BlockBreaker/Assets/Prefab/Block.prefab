@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d758c7e983cd04ab66810988194ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BreakSound: {fileID: 8300000, guid: 73da76492ffaad64483ec91bdb89005d, type: 3}
+  blockSparkFLX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
 --- !u!61 &5166766072197205464
 BoxCollider2D:
   m_ObjectHideFlags: 0
