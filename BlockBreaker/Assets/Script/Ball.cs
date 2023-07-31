@@ -11,9 +11,19 @@ public class Ball : MonoBehaviour
     Vector2 PaddleToBall;
     bool hasStart = false;
     [SerializeField] float xPush , yPush;
+    [SerializeField] List<AudioClip> ClipList = new List<AudioClip>();
     void Start()
     {
         PaddleToBall = transform.position - paddle.transform.position;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (hasStart)
+        {
+            int randomIndex = Random.Range(0,ClipList.Count);
+            GetComponent<AudioSource>().PlayOneShot(ClipList[randomIndex]);
+        }
     }
 
     // Update is called once per frame
