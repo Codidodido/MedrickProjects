@@ -13,6 +13,7 @@ public class GameStatus : MonoBehaviour
     [SerializeField] int CurrentScore = 0;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] List<int> Levels;
+    public bool AutoPlay;
 
     void Start()
     {    
