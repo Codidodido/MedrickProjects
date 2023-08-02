@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -9,6 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject Laser;
     [SerializeField] Vector2 LaserPos;
     [SerializeField] float LaserSpeed;
+
+    Coroutine fireCoroutine;
     // Update is called once per frame
     void Update()
     {
@@ -29,9 +32,24 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject laser = Instantiate(Laser, transform.position, Quaternion.identity);
-            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0f,LaserSpeed);
+            fireCoroutine =  StartCoroutine(FireContinuously());
+        }else if (Input.GetMouseButtonUp(0))
+        {
+            StopCoroutine(fireCoroutine);
         }
         
+    }
+
+    IEnumerator FireContinuously()
+    {
+        while (true)
+        {
+            GameObject laser = Instantiate(Laser, transform.position, Quaternion.identity);
+            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, LaserSpeed);
+            Destroy(laser, 1f);
+            yield return new WaitForSeconds(0.5f);
+        }
+        
+
     }
 }
