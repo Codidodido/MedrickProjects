@@ -10,9 +10,26 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject Laser;
     [SerializeField] Vector2 LaserPos;
     [SerializeField] float LaserSpeed;
-
+    [SerializeField] float Health = 200;
     Coroutine fireCoroutine;
     // Update is called once per frame
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        DamageDealer damagedeal = collision.gameObject.GetComponent<DamageDealer>();
+        ProcessHit(damagedeal);
+    }
+
+    void ProcessHit(DamageDealer damagedeal)
+    {
+        Health -= damagedeal.GetDamage();
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+
+        }
+    }
+
     void Update()
     {
         Move();
