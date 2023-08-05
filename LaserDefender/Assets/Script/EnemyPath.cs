@@ -13,7 +13,6 @@ public class EnemyPath : MonoBehaviour
     void Start()
     {
         wayPoints = waveConfig.GetPathPrefab();
-        transform.position = wayPoints[pathIndex].transform.position;
     }
 
     // Update is called once per frame
