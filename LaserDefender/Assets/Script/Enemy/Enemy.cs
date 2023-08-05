@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float Health = 100;
     [SerializeField] GameObject Laser;
-    
+    [SerializeField] GameObject deathVFX;
     [SerializeField] float LaserSpeed;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,11 +19,18 @@ public class Enemy : MonoBehaviour
         Health -= damagedeal.GetDamage();
         if (Health <= 0)
         {
-            Destroy(gameObject);
+            Die();   
+           
             
         }
     }
 
+    void Die()
+    {
+        Destroy(gameObject);
+        GameObject destroyEffect = Instantiate(deathVFX,transform.position, Quaternion.identity);
+        Destroy(destroyEffect, 1f);
+    }
     private void Start()
     {
         StartCoroutine(Shoot());

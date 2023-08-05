@@ -113,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   Laser: {fileID: 6982762365403768224, guid: 38323bb1ac13b20418395ef6a347b2bb, type: 3}
+  deathVFX: {fileID: 4080279722438200993, guid: 23172eb6f738baf40b26f51e045fc2de, type: 3}
   LaserSpeed: 5
 --- !u!58 &6437627779769929880
 CircleCollider2D:
