@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
             GameObject laser = Instantiate(Laser, transform.position, Quaternion.identity);
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, LaserSpeed);
             //Destroy(laser, 1f);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
         }
         
 
