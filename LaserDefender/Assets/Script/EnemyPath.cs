@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class EnemyPath : MonoBehaviour
 {
-    [SerializeField] List<Transform> way;
-    [SerializeField] float MoveSpeed;
+    WaveConfig waveConfig;
+    List<Transform> wayPoints;
+    
     int pathIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = way[pathIndex].transform.position;
+        wayPoints = waveConfig.GetPathPrefab();
+        transform.position = wayPoints[pathIndex].transform.position;
     }
 
     // Update is called once per frame
@@ -20,12 +22,17 @@ public class EnemyPath : MonoBehaviour
         MoveObject();
     }
 
+    public void SetWaveConfig(WaveConfig waveConfig)
+    {
+        this.waveConfig = waveConfig;
+    }
+
     void MoveObject()
     {
-        if(pathIndex <= way.Count - 1)
+        if(pathIndex <= wayPoints.Count - 1)
         {
-            var targetPos = way[pathIndex].transform.position;
-            var movement = MoveSpeed * Time.deltaTime;
+            var targetPos = wayPoints[pathIndex].transform.position;
+            var movement = waveConfig.GetMoveSpeed() * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPos, movement);
 
             if(transform.position == targetPos)
