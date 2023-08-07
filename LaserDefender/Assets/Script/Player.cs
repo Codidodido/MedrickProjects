@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] float Health = 200;
     [SerializeField] GameObject deathVFX;
     [SerializeField] AudioClip DeathSound;
+    [SerializeField] int Score;
     Coroutine fireCoroutine;
     // Update is called once per frame
 
@@ -33,11 +34,17 @@ public class Player : MonoBehaviour
         Health -= damagedeal.GetDamage();
         if (Health <= 0)
         {
-            Destroy(gameObject);
-            GameObject destroyEffect = Instantiate(deathVFX, transform.position, Quaternion.identity);
-            Destroy(destroyEffect, 1f);
-            AudioSource.PlayClipAtPoint(DeathSound,Camera.main.transform.position,0.75f);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        FindObjectOfType<Level>().LoadGameOver();
+        Destroy(gameObject);
+        GameObject destroyEffect = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Destroy(destroyEffect, 1f);
+        AudioSource.PlayClipAtPoint(DeathSound, Camera.main.transform.position, 0.75f);
     }
 
     void Update()
