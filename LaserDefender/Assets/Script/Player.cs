@@ -6,17 +6,25 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
+    [Header ("Player")]
     [SerializeField] float moveSpeed;
-    [SerializeField] GameObject Laser;
-    [SerializeField] Vector2 LaserPos;
-    [SerializeField] float LaserSpeed;
+    [SerializeField] AudioClip Damage;
     [SerializeField] float Health = 200;
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] AudioClip DeathSound;
     Coroutine fireCoroutine;
     // Update is called once per frame
 
+    [Header ("Laser")]
+    [SerializeField] GameObject Laser;
+    [SerializeField] Vector2 LaserPos;
+    [SerializeField] float LaserSpeed;
+    [SerializeField] AudioClip Lasersound;
+    [SerializeField][Range(0f, 1f)] float LasersoundVolume;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DamageDealer damagedeal = collision.gameObject.GetComponent<DamageDealer>();
+        AudioSource.PlayClipAtPoint(Damage, Camera.main.transform.position, 0.75f);
         ProcessHit(damagedeal);
     }
 
@@ -26,7 +34,9 @@ public class Player : MonoBehaviour
         if (Health <= 0)
         {
             Destroy(gameObject);
-
+            GameObject destroyEffect = Instantiate(deathVFX, transform.position, Quaternion.identity);
+            Destroy(destroyEffect, 1f);
+            AudioSource.PlayClipAtPoint(DeathSound,Camera.main.transform.position,0.75f);
         }
     }
 
@@ -50,6 +60,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             fireCoroutine =  StartCoroutine(FireContinuously());
+            
         }else if (Input.GetMouseButtonUp(0))
         {
             StopCoroutine(fireCoroutine);
@@ -62,6 +73,7 @@ public class Player : MonoBehaviour
         while (true)
         {
             GameObject laser = Instantiate(Laser, transform.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(Lasersound, Camera.main.transform.position, LasersoundVolume);
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, LaserSpeed);
             //Destroy(laser, 1f);
             yield return new WaitForSeconds(0.1f);

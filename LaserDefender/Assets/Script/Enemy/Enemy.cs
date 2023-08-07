@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject Laser;
     [SerializeField] GameObject deathVFX;
     [SerializeField] float LaserSpeed;
+    [SerializeField] AudioClip DeathSound;
+    [SerializeField] AudioClip LaseSound;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DamageDealer damagedeal = collision.gameObject.GetComponent<DamageDealer>();
@@ -20,8 +22,6 @@ public class Enemy : MonoBehaviour
         if (Health <= 0)
         {
             Die();   
-           
-            
         }
     }
 
@@ -30,7 +30,9 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
         GameObject destroyEffect = Instantiate(deathVFX,transform.position, Quaternion.identity);
         Destroy(destroyEffect, 1f);
+        AudioSource.PlayClipAtPoint(DeathSound,Camera.main.transform.position,0.75f);
     }
+
     private void Start()
     {
         StartCoroutine(Shoot());
@@ -43,6 +45,7 @@ public class Enemy : MonoBehaviour
 
             //Destroy(laser, 1f);
             GameObject laser = Instantiate(Laser, transform.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(LaseSound, Camera.main.transform.position, 0.25f);
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -LaserSpeed);
             yield return new WaitForSeconds(0.75f);
             

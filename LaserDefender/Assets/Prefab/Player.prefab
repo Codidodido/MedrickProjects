@@ -98,6 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  Damage: {fileID: 8300000, guid: ed4e0f01fe676cb488468e74612e7fe4, type: 3}
+  Health: 200
   Laser: {fileID: 6982762365403768224, guid: 063f8369b64de62478740bc82177cf7c, type: 3}
   LaserPos: {x: 0, y: 0}
   LaserSpeed: 5
+  Lasersound: {fileID: 8300000, guid: a6891e52b4e125e46907d34986e14be0, type: 3}
+  LasersoundVolume: 0
