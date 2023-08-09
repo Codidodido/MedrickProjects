@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Player : MonoBehaviour
 {
@@ -9,10 +11,11 @@ public class Player : MonoBehaviour
     [Header ("Player")]
     [SerializeField] float moveSpeed;
     [SerializeField] AudioClip Damage;
-    [SerializeField] float Health = 200;
+    [SerializeField] int Health=200;
     [SerializeField] GameObject deathVFX;
     [SerializeField] AudioClip DeathSound;
-    [SerializeField] int Score;
+    
+
     Coroutine fireCoroutine;
     // Update is called once per frame
 
@@ -22,6 +25,9 @@ public class Player : MonoBehaviour
     [SerializeField] float LaserSpeed;
     [SerializeField] AudioClip Lasersound;
     [SerializeField][Range(0f, 1f)] float LasersoundVolume;
+
+    [Header("Score")]
+    [SerializeField] TextMeshProUGUI ScoreText;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DamageDealer damagedeal = collision.gameObject.GetComponent<DamageDealer>();
@@ -40,11 +46,21 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        FindObjectOfType<Level>().LoadGameOver();
+        
         Destroy(gameObject);
         GameObject destroyEffect = Instantiate(deathVFX, transform.position, Quaternion.identity);
         Destroy(destroyEffect, 1f);
         AudioSource.PlayClipAtPoint(DeathSound, Camera.main.transform.position, 0.75f);
+        FindObjectOfType<Level>().LoadGameOver();
+    }
+    private void Start()
+    {
+        FindObjectOfType<GameSession>().Reset();
+    }
+
+    public int GetHealth()
+    {
+        return Health;
     }
 
     void Update()
@@ -74,6 +90,8 @@ public class Player : MonoBehaviour
         }
         
     }
+
+    
 
     IEnumerator FireContinuously()
     {

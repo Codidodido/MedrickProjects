@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float LaserSpeed;
     [SerializeField] AudioClip DeathSound;
     [SerializeField] AudioClip LaseSound;
+    [SerializeField] int Point;
+    private int Damage = 42; 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DamageDealer damagedeal = collision.gameObject.GetComponent<DamageDealer>();
@@ -27,6 +29,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        FindObjectOfType<GameSession>().AddScore(Point);
         Destroy(gameObject);
         GameObject destroyEffect = Instantiate(deathVFX,transform.position, Quaternion.identity);
         Destroy(destroyEffect, 1f);

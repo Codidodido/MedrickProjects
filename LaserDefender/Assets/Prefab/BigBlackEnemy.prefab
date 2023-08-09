@@ -117,6 +117,7 @@ MonoBehaviour:
   LaserSpeed: 5
   DeathSound: {fileID: 8300000, guid: de104e0ab12c5264fa2f0c88a092b06b, type: 3}
   LaseSound: {fileID: 8300000, guid: e6ee49863eba31149b93779cc511fd07, type: 3}
+  Point: 123
 --- !u!58 &-8221804682752067373
 CircleCollider2D:
   m_ObjectHideFlags: 0
