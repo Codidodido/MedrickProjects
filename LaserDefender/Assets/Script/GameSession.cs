@@ -11,6 +11,8 @@ public class GameSession : MonoBehaviour
     {
         return Score;
     }
+
+    
     public void AddScore(int number)
     {
         Score += number;
@@ -23,6 +25,13 @@ public class GameSession : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if(FindObjectsOfType<GameSession>().Length >1) {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+        
     }
 }

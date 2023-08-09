@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 504214835}
   - component: {fileID: 504214837}
   - component: {fileID: 504214836}
+  - component: {fileID: 504214838}
   m_Layer: 5
   m_Name: Score Text
   m_TagString: Untagged
@@ -215,8 +216,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 32
+  m_VerticalAlignment: 8192
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -258,6 +259,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504214834}
   m_CullTransparentMesh: 1
+--- !u!114 &504214838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504214834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bcdeac57db7704468b174a7137314da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreText: {fileID: 504214836}
 --- !u!1 &639539760
 GameObject:
   m_ObjectHideFlags: 0
